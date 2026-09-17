@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\**" />
+    <Content Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Models\Auth\AuthResponse.cs" />
+    <Compile Include="Models\Auth\LoginRequest.cs" />
+    <Compile Include="Models\Auth\RegisterRequest.cs" />
+    <Compile Include="Models\Interfaces\IContentService.cs" />
+    <Compile Include="Models\Interfaces\ICourseService.cs" />
+    <Compile Include="Models\Interfaces\IEnrollmentService.cs" />
+    <Compile Include="Models\Interfaces\IJwtTokenService.cs" />
+    <Compile Include="Models\Interfaces\IProgressService.cs" />
+    <Compile Include="Models\Interfaces\IUserService.cs" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
+
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.12">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.12" />
+
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.2.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.2.3" />
+	</ItemGroup>
+
+
+</Project>
