@@ -1,0 +1,31 @@
+@model IEnumerable<PIM.Domain.Entities.User>
+@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Usuários</h1>
+
+<p><a class="btn btn-primary" href="/Admin/Users/Create">Criar novo</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.Id</td>
+                <td>@u.Name</td>
+                <td>@u.Email</td>
+                <td>@u.GetType().Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

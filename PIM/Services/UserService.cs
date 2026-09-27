@@ -42,10 +42,16 @@ namespace PIM.Services
 
         public User? Authenticate(string email, string password)
         {
+            Console.WriteLine($"[UserService] Authenticate called for email='{email}'");
             var user = _db.Set<User>().FirstOrDefaultAsync(u => u.Email == email).GetAwaiter().GetResult();
-            if (user == null) return null;
+            if (user == null)
+            {
+                Console.WriteLine("[UserService] No user found with that email.");
+                return null;
+            }
 
             var result = _hasher.VerifyHashedPassword(user, user.PasswordHash, password);
+            Console.WriteLine($"[UserService] Password verification result: {result}");
             if (result == PasswordVerificationResult.Success)
                 return user;
 

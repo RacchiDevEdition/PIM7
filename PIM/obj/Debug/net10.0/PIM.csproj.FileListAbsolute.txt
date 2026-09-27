@@ -169,3 +169,6 @@ C:\Users\samsung\source\repos\PIM\PIM\obj\Debug\net10.0\PIM.pdb
 C:\Users\samsung\source\repos\PIM\PIM\obj\Debug\net10.0\PIM.genruntimeconfig.cache
 C:\Users\samsung\source\repos\PIM\PIM\obj\Debug\net10.0\ref\PIM.dll
 C:\Users\samsung\source\repos\PIM\PIM\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\samsung\source\repos\PIM\PIM\obj\Debug\net10.0\PIM.RazorAssemblyInfo.cache
+C:\Users\samsung\source\repos\PIM\PIM\obj\Debug\net10.0\PIM.RazorAssemblyInfo.cs
+C:\Users\samsung\source\repos\PIM\PIM\obj\Debug\net10.0\PIM.sourcelink.json

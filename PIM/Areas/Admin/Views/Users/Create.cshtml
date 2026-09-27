@@ -1,0 +1,25 @@
+@model PIM.Domain.Entities.User
+@{
+    ViewData["Title"] = "Criar Usuário";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Criar Usuário</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Nome</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password (texto simples)</label>
+        <input name="Password" type="password" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>
